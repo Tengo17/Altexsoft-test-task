@@ -1,3 +1,4 @@
+
 export const controls = {
   playerOneAttack: "KeyA",
   playerOneBlock: "KeyD",
