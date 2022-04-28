@@ -1,10 +1,14 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { HealthBar, Modal } from "../../components";
 import "./Arena.scss";
 import { useFight } from "./hooks";
 
+
+
 const Arena = () => {
   const { fighterOneDetails, fighterTwoDetails, winner } = useFight();
-
+  
   return (
     <div className="arena">
       <Modal isShow={!!winner} name={winner?.name} url={winner?.avatar} />
@@ -33,5 +37,6 @@ const Arena = () => {
     </div>
   );
 };
+
 
 export default Arena;

@@ -22,6 +22,18 @@ const Board = () => {
     setSelectedFightersQty(selectedFightersQty + 1);
   };
 
+
+
+  useEffect(() => {
+    setFightersData((prevState) => ({
+      ...prevState,
+      [player]: fighter
+    }));
+  },
+  [fighter]
+  );
+  
+  
   // TODO add logic for setting selectedFightersData
   // need for showing selected fighters with their details
 
